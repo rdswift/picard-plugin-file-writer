@@ -2,11 +2,13 @@
 
 ## Overview
 
-This plugin adds scripting functions to allow writing text to an output file, and sanitizing text to ensure that it is suitable for use in a file path.
+This plugin adds a scripting function to allow writing text to an output file.
+
+**Use with caution, because if not properly configured it could overwrite existing files, resulting in unintended consequences!**
 
 Usage: **$writeline(file,text\[,reset\])**
 
-This will write `text` (followed by a newline) to `file`.  The text will be appended to the file unless `reset` is set, in which case the file will be overwritten. If the destination `file` path is not specified as an absolute path to the destination file (beginning with a Windows drive letter and colon or path separator), then the path will be considered relative to the ***Destination directory*** specified in Picard's **File Naming Options** settings. If the target path does not exist, it will be created automatically.
+This will write `text` (followed by a newline) to `file`.  The text will be appended to the file unless `reset` is set, in which case the file will be overwritten. If the destination `file` path is not specified as an absolute path to the destination file (beginning with a Windows drive letter and colon or path separator), then the path will be considered relative to the ***Destination directory*** specified in Picard's **File Naming** option settings. If the target path does not exist, it will be created automatically.
 
 ***NOTE:*** The text will be written to the file with a character encoding of UTF-8.
 

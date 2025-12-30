@@ -8,6 +8,9 @@ license_url = "https://www.gnu.org/licenses/gpl-2.0.html"
 long_description = """
 This plugin adds a scripting function `$writeline()` to allow writing text to an output file.
 
+**Use with caution, because if not properly configured it could overwrite existing files, resulting in
+unintended consequences!**
+
 Usage: **$writeline(file,text[,reset])**
 
 This will write `text` (followed by a newline) to `file`. The text will be appended to the file
