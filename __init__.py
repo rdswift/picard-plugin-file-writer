@@ -85,6 +85,12 @@ def func_writeline(parser, file_to_write, text_to_write, reset_file=None):
     settings = api.plugin_config
     global_settings = api.global_config.setting
 
+    # Do not allow writing to files if the file naming script editor is open or if Picard is disabled
+    # because the options dialog is open.  This avoids potential issues with file writing while the
+    # user is editing file naming or tagging scripts.
+    if api.tagger.window.script_editor_dialog is not None or not api.tagger.window.isEnabled():
+        return ""
+
     if not settings['writing_enabled']:
         api.logger.warning("File writing is disabled.")
         return ""
