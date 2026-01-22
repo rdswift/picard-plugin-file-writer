@@ -149,10 +149,10 @@ def enable(api: PluginApi):
     api.register_script_function(
         func_writeline,
         name="writeline",
+        signature=api.tr('help.writeline.signature', '$writeline(file,text[,reset])'),
         documentation=api.tr(
-            'help.writeline',
+            'help.writeline.documentation',
             (
-                "`$writeline(file,text[,reset])`\n\n"
                 "Writes the text to the specified file. "
                 "The text will be appended to the file unless `reset` is set, in which case the file will be overwritten. "
                 "If the destination `file` path is not specified as an absolute path to the destination file (beginning "
