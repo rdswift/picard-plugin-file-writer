@@ -27,3 +27,4 @@ categories = [
     "other",
 ]
 homepage = "https://picard-plugins-user-guides.readthedocs.io/en/latest/file_writer/user_guide.html"
+report_bugs_to = "https://github.com/rdswift/picard-plugin-file-writer/issues"
