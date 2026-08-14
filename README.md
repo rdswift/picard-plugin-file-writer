@@ -44,3 +44,7 @@ $if($and($lt(%discnumber%,2),$lt(%tracknumber%,2)),
   $writeline(/var/log/PicardProcessing,$datetime(): %musicbrainz_albumid% : %albumartist% - %album%)
 )
 ```
+
+## Contributing
+
+Please see the [Contribution Guidelines for MusicBrainz Picard Plugins](https://github.com/metabrainz/picard-plugins-registry/blob/main/PLUGIN_CONTRIBUTING.md) on how to help with development of this plugin.
